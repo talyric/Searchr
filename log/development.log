@@ -2824,3 +2824,629 @@ Rendering front/summary
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
 Completed in 630ms (View: 615, DB: 7) | 200 OK [http://127.0.0.1/front/summary]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#summary (for 127.0.0.1 at 2010-01-28 07:11:28) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering front/summary
+  DRYML: Compiled app/views/front/summary.dryml in 0.38s
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 626ms (View: 613, DB: 7) | 200 OK [http://127.0.0.1/front/summary]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#summary (for 127.0.0.1 at 2010-01-28 07:11:49) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering front/summary
+  DRYML: Compiled app/views/front/summary.dryml in 0.38s
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (can't convert nil into String) on line #36 of app/views/front/summary.dryml:
+33:           <td><gem-version/></td>          
+34:           <td><gem-frozen/></td>
+35:           <td><gem-dependencies/></td>
+36:         </tr>
+37:       </with-gems>
+38:     </table>
+39: 
+
+    hobo (0.9.106) taglibs/rapid_summary.dryml:36:in `basename'
+    hobo (0.9.106) taglibs/rapid_summary.dryml:36:in `git_branch'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_summary.dryml:35:in `git_branch'
+    hobo (0.9.106) taglibs/rapid_summary.dryml:77:in `cms_branch'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_summary.dryml:75:in `cms_branch'
+    app/views/front/summary.dryml:20:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/front/summary.dryml:19:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/core.dryml:78:in `if_'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/core.dryml:76:in `if_'
+    app/views/front/summary.dryml:19:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/front/summary.dryml:16:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/rapid_core.dryml:102:in `table'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) taglibs/rapid_core.dryml:101:in `table'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/core.dryml:78:in `if_'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/core.dryml:76:in `if_'
+    hobo (0.9.106) taglibs/rapid_core.dryml:101:in `table'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_core.dryml:100:in `table'
+    app/views/front/summary.dryml:16:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/front/summary.dryml:2:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:455:in `call'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:455:in `override_and_call_tag'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/rapid_document_tags.dryml:21:in `section'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_document_tags.dryml:20:in `section'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:464:in `send'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:46:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/scoped_variables.rb:20:in `new_scope'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:38:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:37:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:447:in `call'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:447:in `override_and_call_tag'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:447:in `override_and_call_tag'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:37:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:16:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:377:in `call'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:377:in `call_tag_parameter_with_default_content'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/core.dryml:55:in `do_'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/core.dryml:55:in `do_'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:381:in `send'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:381:in `call_tag_parameter_with_default_content'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:403:in `call_tag_parameter'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:165:in `html'
+    hobo (0.9.106) lib/hobo/dryml/scoped_variables.rb:20:in `new_scope'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:165:in `html'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:160:in `html'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:16:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:14:in `page_without_aaa82d3a9ca5'
+    app/views/taglibs/themes/clean/clean.dryml:2:in `page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    app/views/taglibs/themes/clean/clean.dryml:1:in `page'
+    app/views/front/summary.dryml:1:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:267:in `new_object_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:255:in `new_object_context'
+    app/views/front/summary.dryml:1:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:22:in `render_for_rails22'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:142:in `render_dryml'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:138:in `render_dryml'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:106:in `render'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:83:in `render_for_file'
+    hobo (0.9.106) lib/hobo/controller.rb:23:in `call'
+    hobo (0.9.106) lib/hobo/controller.rb:23:in `included_in_class'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (135.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#summary (for 127.0.0.1 at 2010-01-28 07:13:37) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering front/summary
+  DRYML: Compiled app/views/front/summary.dryml in 0.38s
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 580ms (View: 568, DB: 4) | 200 OK [http://127.0.0.1/front/summary]
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#summary (for 127.0.0.1 at 2010-01-28 07:13:52) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering front/summary
+  DRYML: Compiled app/views/front/summary.dryml in 0.38s
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (can't convert nil into String) on line #36 of app/views/front/summary.dryml:
+33:           <td><gem-version-required/></td>
+34:           <td><gem-version/></td>          
+35:           <td><gem-frozen/></td>
+36:           <td><gem-dependencies/></td>
+37:         </tr>
+38:       </with-gems>
+39:     </table>
+
+    hobo (0.9.106) taglibs/rapid_summary.dryml:36:in `basename'
+    hobo (0.9.106) taglibs/rapid_summary.dryml:36:in `git_branch'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_summary.dryml:35:in `git_branch'
+    hobo (0.9.106) taglibs/rapid_summary.dryml:77:in `cms_branch'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_summary.dryml:75:in `cms_branch'
+    app/views/front/summary.dryml:22:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/front/summary.dryml:19:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/core.dryml:78:in `if_'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/core.dryml:76:in `if_'
+    app/views/front/summary.dryml:19:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/front/summary.dryml:16:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/rapid_core.dryml:102:in `table'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) taglibs/rapid_core.dryml:101:in `table'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/core.dryml:78:in `if_'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/core.dryml:76:in `if_'
+    hobo (0.9.106) taglibs/rapid_core.dryml:101:in `table'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_core.dryml:100:in `table'
+    app/views/front/summary.dryml:16:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    app/views/front/summary.dryml:2:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:455:in `call'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:455:in `override_and_call_tag'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/rapid_document_tags.dryml:21:in `section'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_document_tags.dryml:20:in `section'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:464:in `send'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:464:in `override_and_call_tag'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:46:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/scoped_variables.rb:20:in `new_scope'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:38:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:37:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:447:in `call'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:447:in `override_and_call_tag'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:447:in `override_and_call_tag'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:427:in `call_tag_parameter'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:37:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:16:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:377:in `call'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:377:in `call_tag_parameter_with_default_content'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `call'
+    hobo (0.9.106) lib/hobo/dryml/tag_parameters.rb:21:in `method_missing'
+    hobo (0.9.106) taglibs/core.dryml:55:in `do_'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/core.dryml:55:in `do_'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:381:in `send'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:381:in `call_tag_parameter_with_default_content'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:403:in `call_tag_parameter'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:165:in `html'
+    hobo (0.9.106) lib/hobo/dryml/scoped_variables.rb:20:in `new_scope'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:165:in `html'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:160:in `html'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:16:in `page_without_aaa82d3a9ca5'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) taglibs/rapid_pages.dryml:14:in `page_without_aaa82d3a9ca5'
+    app/views/taglibs/themes/clean/clean.dryml:2:in `page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:328:in `_tag_context'
+    app/views/taglibs/themes/clean/clean.dryml:1:in `page'
+    app/views/front/summary.dryml:1:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:267:in `new_object_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:248:in `new_context'
+    hobo (0.9.106) lib/hobo/dryml/template_environment.rb:255:in `new_object_context'
+    app/views/front/summary.dryml:1:in `render_page'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:22:in `render_for_rails22'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:142:in `render_dryml'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:138:in `render_dryml'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:106:in `render'
+    hobo (0.9.106) lib/hobo/dryml/template_handler.rb:83:in `render_for_file'
+    hobo (0.9.106) lib/hobo/controller.rb:23:in `call'
+    hobo (0.9.106) lib/hobo/controller.rb:23:in `included_in_class'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (203.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#summary (for 127.0.0.1 at 2010-01-28 07:14:11) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendering front/summary
+  DRYML: Compiled app/views/front/summary.dryml in 0.38s
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 602ms (View: 589, DB: 7) | 200 OK [http://127.0.0.1/front/summary]
