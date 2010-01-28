@@ -16,6 +16,12 @@
     <table class="app-summary">      
       <tr> <th></th><th></th></tr>
       <tr> <td>Method</td>                 <td><cms-method/></td> </tr>
+      <if test="&cms_method.strip=='git'">
+        <tr> <td>Version</td>                <td><cms-version/></td> </tr>
+        <tr> <td>Date</td>                   <td><cms-last-commit-time/></td> </tr>
+        <tr> <td>Branch</td>                 <td><cms-branch/></td> </tr>
+        <tr> <td>Clean?</td>                 <td><cms-clean/></td></tr>
+      </if>
     </table>
 
 
