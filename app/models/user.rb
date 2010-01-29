@@ -18,6 +18,9 @@ class User < ActiveRecord::Base
     
     timestamps
   end
+  
+  has_many :capabilities, :through => :user_capabilities, :accessible => true
+  has_many :user_capabilities, :dependent => :destroy
 
   # This gives admin rights to the first sign-up.
   # Just remove it if you don't want that
@@ -51,6 +54,9 @@ class User < ActiveRecord::Base
   end
 
   def update_permitted?
+    #acting_user.administrator? || 
+    #  (acting_user == self && only_changed?(:email_address, :crypted_password, 
+    #                                        :current_password, :password, :password_confirmation))
     acting_user.administrator? || 
       (acting_user == self && only_changed?(:email_address, :crypted_password, :address, :city, :address_state, :zip, :primary_phone, :secondary_phone,
                                             :current_password, :password, :password_confirmation))
@@ -63,7 +69,7 @@ class User < ActiveRecord::Base
   end
 
   def view_permitted?(field)
-    acting_user.administrator? || acting_user == self
+    acting_user.administrator? || acting_user == self || true
   end
   
 #  def edit_permitted(attribute)
