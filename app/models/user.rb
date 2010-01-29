@@ -66,8 +66,8 @@ class User < ActiveRecord::Base
     acting_user.administrator? || acting_user == self
   end
   
-  def edit_permitted(attribute)
-    acting_user.administrator? || acting_user == self
-  end
+#  def edit_permitted(attribute)
+#    acting_user.administrator? || acting_user == self
+#  end
 
 end
