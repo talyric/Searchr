@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100128142741) do
+ActiveRecord::Schema.define(:version => 20100129003041) do
 
   create_table "users", :force => true do |t|
     t.string   "crypted_password",          :limit => 40
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20100128142741) do
     t.datetime "updated_at"
     t.string   "state",                                   :default => "active"
     t.datetime "key_timestamp"
+    t.string   "address"
+    t.string   "city"
+    t.string   "zip"
+    t.string   "primary_phone"
+    t.string   "secondary_phone"
+    t.string   "other_info_1"
+    t.string   "other_info_2"
+    t.string   "other_info_3"
+    t.string   "address_state"
   end
 
   add_index "users", ["state"], :name => "index_users_on_state"
