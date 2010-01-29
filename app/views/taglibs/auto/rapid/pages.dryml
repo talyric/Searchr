@@ -5,9 +5,139 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&Capability"><ht key="capabilities.nav_item">Capabilities</ht></nav-item>
     <nav-item with="&User"><ht key="users.nav_item">Users</ht></nav-item>
   </navigation>
 </def>
+
+
+
+
+<!-- ====== Capability Pages ====== -->
+
+<def tag="index-page" for="Capability">
+  <page merge title="#{ht 'capabilities.index.title', :default=>['Capabilities'] }">
+    <body: class="index-page capability" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="capabilities.index.heading">
+            Capabilities
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="capabilities.collection.count" count="&this.size">
+            There <count prefix="are"/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="capabilities.actions.new">New Capability</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Capability">
+  <page merge title="#{ht 'capabilities.new.title', :default=>['New Capability'] }">
+    <body: class="new-page capability" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="capabilities.new.heading">
+            New Capability
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'capabilities.actions.create', :default=>['Create Capability']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Capability">
+  <page merge title="#{ht 'capabilities.show.title', :default=>['Capability'] }">
+
+    <body: class="show-page capability" param/>
+
+    <content: param>
+          <header param="content-header">
+            <a:users param="parent-link">&laquo; <ht key="capabilities.actions.back" to="users"><name/></ht></a:users>
+            <h2 param="heading">
+              <ht key="capabilities.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="capabilities.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Capability
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <section param="collection-section">
+              <h3 param="collection-heading">
+                <ht key="capabilities.collection.heading.other" >
+                  Users
+                </ht>
+              </h3>
+
+              <collection:users param/>
+            </section>
+          </section>
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Capability">
+  <page merge title="#{ht 'capabilities.edit.title', :default=>['Edit Capability'] }">
+
+    <body: class="edit-page capability" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="capabilities.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit <type-name/>
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'capabilities.actions.delete', :default=>['Remove This Capability']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
 
 
 
@@ -78,6 +208,7 @@
 
     <content: param>
           <header param="content-header">
+            <a:capabilities param="parent-link">&laquo; <ht key="users.actions.back" to="capabilities"><name/></ht></a:capabilities>
             <h2 param="heading">
               <ht key="users.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
                 <name/>
@@ -95,6 +226,15 @@
 
           <section param="content-body">
             <field-list fields="email_address, address, city, address_state, zip, primary_phone, secondary_phone, other_info_1, other_info_2, other_info_3, state" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading">
+                <ht key="users.collection.heading.your" >
+                  <Your/>Capabilities
+                </ht>
+              </h3>
+
+              <collection:capabilities param/>
+            </section>
           </section>
     </content:>
 

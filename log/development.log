@@ -5001,3 +5001,1337 @@ Processing UsersController#edit (for 127.0.0.1 at 2010-01-28 16:45:29) [GET]
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
   [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
 Completed in 389ms (View: 379, DB: 2) | 200 OK [http://0.0.0.0/users/3-resource/edit]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (11.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_state')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to HoboMigration1 (20100128142741)
+Migrating to AddedMoreUserInfo (20100128235025)
+Migrating to AddedStateCol (20100129003041)
+Migrating to AddedUserCapabilities (20100129215341)
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "capabilities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE TABLE "user_capabilities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "user_id" integer, "capability_id" integer) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE INDEX "index_user_capabilities_on_user_id" ON "user_capabilities" ("user_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCREATE INDEX "index_user_capabilities_on_capability_id" ON "user_capabilities" ("capability_id")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100129215341')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("capabilities")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("user_capabilities")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_user_capabilities_on_capability_id')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_user_capabilities_on_user_id')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_state')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 13:54:22) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering front/index
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/core.dryml in 0.02s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_core.dryml in 0.17s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_pages.dryml in 0.16s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_editing.dryml in 0.09s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_forms.dryml in 0.29s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_navigation.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_plus.dryml in 0.15s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_summary.dryml in 0.14s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_user_pages.dryml in 0.18s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid.dryml in 1.31s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.02s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.22s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.10s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.66s
+  DRYML: Compiled app/views/front/index.dryml in 1.78s
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 1841ms (View: 1837, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 13:54:30) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCapability Load (0.1ms)[0m   [0;1mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 279ms (View: 275, DB: 2) | 200 OK [http://0.0.0.0/capabilities]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 13:54:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.1ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+Completed in 274ms (View: 268, DB: 3) | 200 OK [http://0.0.0.0/users]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-01-29 13:54:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"3-resource", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+Completed in 305ms (View: 295, DB: 2) | 200 OK [http://0.0.0.0/users/3-resource]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-01-29 13:54:45) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3-resource", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+Completed in 398ms (View: 388, DB: 2) | 200 OK [http://0.0.0.0/users/3-resource/edit]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Hobo::DevController#set_current_user (for 127.0.0.1 at 2010-01-29 13:54:54) [GET]
+  Parameters: {"login"=>"admin@admin.com"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email_address" = 'admin@admin.com') LIMIT 1[0m
+Redirected to http://0.0.0.0:3005/users/3-resource/edit
+Completed in 15ms (DB: 1) | 302 Found [http://0.0.0.0/dev/set_current_user?login=admin@admin.com]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-01-29 13:54:55) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3-resource", "controller"=>"users"}
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT * FROM "capabilities" [0m
+Completed in 497ms (View: 482, DB: 4) | 200 OK [http://0.0.0.0/users/3-resource/edit]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 13:55:09) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCapability Load (0.1ms)[0m   [0;1mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 278ms (View: 273, DB: 2) | 200 OK [http://0.0.0.0/capabilities]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#new (for 127.0.0.1 at 2010-01-29 13:55:51) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 278ms (View: 274, DB: 2) | 200 OK [http://0.0.0.0/capabilities/new]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#create (for 127.0.0.1 at 2010-01-29 13:56:28) [POST]
+  Parameters: {"capability"=>{"name"=>"Certified to drive big stuff"}, "page_path"=>"capabilities/new", "authenticity_token"=>"YPSwEmvu1nbnKM0MOZUCBcaNKpXOkPJcf56D64E4SiQ="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Create (0.5ms)[0m   [0mINSERT INTO "capabilities" ("name", "updated_at", "created_at") VALUES('Certified to drive big stuff', '2010-01-29 21:56:28', '2010-01-29 21:56:28')[0m
+Redirected to http://0.0.0.0:3005/capabilities/1-certified-to-drive-big-stuff
+Completed in 9ms (DB: 2) | 302 Found [http://0.0.0.0/capabilities]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#show (for 127.0.0.1 at 2010-01-29 13:56:28) [GET]
+  Parameters: {"id"=>"1-certified-to-drive-big-stuff"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 1) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+Completed in 265ms (View: 260, DB: 2) | 200 OK [http://0.0.0.0/capabilities/1-certified-to-drive-big-stuff]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 13:56:37) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 225ms (View: 219, DB: 3) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#new (for 127.0.0.1 at 2010-01-29 13:56:39) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 274ms (View: 270, DB: 2) | 200 OK [http://0.0.0.0/capabilities/new]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#create (for 127.0.0.1 at 2010-01-29 13:56:53) [POST]
+  Parameters: {"capability"=>{"name"=>"Cettified to drive cool stuff"}, "page_path"=>"capabilities/new", "authenticity_token"=>"YPSwEmvu1nbnKM0MOZUCBcaNKpXOkPJcf56D64E4SiQ="}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCapability Create (0.4ms)[0m   [0;1mINSERT INTO "capabilities" ("name", "updated_at", "created_at") VALUES('Cettified to drive cool stuff', '2010-01-29 21:56:53', '2010-01-29 21:56:53')[0m
+Redirected to http://0.0.0.0:3005/capabilities/2-cettified-to-drive-cool-stuff
+Completed in 9ms (DB: 1) | 302 Found [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#show (for 127.0.0.1 at 2010-01-29 13:56:53) [GET]
+  Parameters: {"id"=>"2-cettified-to-drive-cool-stuff"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.5ms)[0m   [0mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 2) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+Completed in 253ms (View: 247, DB: 3) | 200 OK [http://0.0.0.0/capabilities/2-cettified-to-drive-cool-stuff]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 13:56:55) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCapability Load (0.3ms)[0m   [0;1mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 287ms (View: 281, DB: 2) | 200 OK [http://0.0.0.0/capabilities]
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#new (for 127.0.0.1 at 2010-01-29 13:56:58) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 326ms (View: 317, DB: 2) | 200 OK [http://0.0.0.0/capabilities/new]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#create (for 127.0.0.1 at 2010-01-29 13:57:11) [POST]
+  Parameters: {"capability"=>{"name"=>"Certified to drive expensive stuff"}, "page_path"=>"capabilities/new", "authenticity_token"=>"YPSwEmvu1nbnKM0MOZUCBcaNKpXOkPJcf56D64E4SiQ="}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Create (0.4ms)[0m   [0mINSERT INTO "capabilities" ("name", "updated_at", "created_at") VALUES('Certified to drive expensive stuff', '2010-01-29 21:57:11', '2010-01-29 21:57:11')[0m
+Redirected to http://0.0.0.0:3005/capabilities/3-certified-to-drive-expensive-stuff
+Completed in 9ms (DB: 1) | 302 Found [http://0.0.0.0/capabilities]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#show (for 127.0.0.1 at 2010-01-29 13:57:11) [GET]
+  Parameters: {"id"=>"3-certified-to-drive-expensive-stuff"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 3) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 204ms (View: 199, DB: 2) | 200 OK [http://0.0.0.0/capabilities/3-certified-to-drive-expensive-stuff]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 13:57:14) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 277ms (View: 272, DB: 2) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 13:57:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (1.5ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;36;1mCapability Load (0.1ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;36;1mCapability Load (0.1ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+Completed in 316ms (View: 308, DB: 4) | 200 OK [http://0.0.0.0/users]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-01-29 13:57:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"3-resource", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+Completed in 326ms (View: 314, DB: 2) | 200 OK [http://0.0.0.0/users/3-resource]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-01-29 13:57:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"3-resource", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;36;1mCapability Load (0.4ms)[0m   [0;1mSELECT * FROM "capabilities" [0m
+Completed in 531ms (View: 520, DB: 3) | 200 OK [http://0.0.0.0/users/3-resource/edit]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-01-29 13:57:52) [PUT]
+  Parameters: {"user"=>{"capabilities"=>["", "@1", "@3"], "city"=>"", "name"=>"resource", "zip"=>"", "secondary_phone"=>"", "address_state"=>"", "administrator"=>"0", "other_info_1"=>"", "other_info_2"=>"", "address"=>"", "other_info_3"=>"", "primary_phone"=>"", "email_address"=>"resource@me.com"}, "page_path"=>"users/edit", "action"=>"update", "_method"=>"PUT", "authenticity_token"=>"YPSwEmvu1nbnKM0MOZUCBcaNKpXOkPJcf56D64E4SiQ=", "id"=>"3-resource", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 1) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 3) [0m
+  [4;36;1mCapability Load (0.1ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mUserCapability Create (0.5ms)[0m   [0mINSERT INTO "user_capabilities" ("updated_at", "capability_id", "user_id", "created_at") VALUES('2010-01-29 21:57:52', 1, 3, '2010-01-29 21:57:52')[0m
+  [4;36;1mUserCapability Create (0.1ms)[0m   [0;1mINSERT INTO "user_capabilities" ("updated_at", "capability_id", "user_id", "created_at") VALUES('2010-01-29 21:57:52', 3, 3, '2010-01-29 21:57:52')[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'resource' AND "users".id <> 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email_address") = 'resource@me.com' AND "users".id <> 3) LIMIT 1[0m
+  [4;35;1mUser Update (0.4ms)[0m   [0mUPDATE "users" SET "address_state" = '', "secondary_phone" = '', "zip" = '', "city" = '', "other_info_3" = '', "primary_phone" = '', "other_info_2" = '', "address" = '', "updated_at" = '2010-01-29 21:57:52', "other_info_1" = '' WHERE "id" = 3[0m
+Redirected to http://0.0.0.0:3005/users/3-resource
+Completed in 146ms (DB: 3) | 302 Found [http://0.0.0.0/users/3-resource]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-01-29 13:57:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"3-resource", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+Completed in 398ms (View: 387, DB: 3) | 200 OK [http://0.0.0.0/users/3-resource]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2010-01-29 13:57:57) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Redirected to http://0.0.0.0:3005
+Completed in 10ms (DB: 1) | 302 Found [http://0.0.0.0/logout]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 13:57:57) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 263ms (View: 259, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 13:58:00) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 304ms (View: 299, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:00:28) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 219ms (View: 214, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:00:30) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 278ms (View: 273, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:00:32) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 283ms (View: 279, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:00:39) [GET]
+Rendering front/index
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 281ms (View: 276, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:00:41) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 281ms (View: 276, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#do_signup (for 127.0.0.1 at 2010-01-29 14:02:39) [POST]
+  Parameters: {"page_path"=>"users/signup", "action"=>"do_signup", "authenticity_token"=>"hI6UloQ6f72+L7utgp+um3Qq8CxQkTjwdON7+FYNDS4=", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email_address" IS NULL) LIMIT 1[0m
+Rendering users/signup
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.35s
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 654ms (View: 547, DB: 2) | 200 OK [http://0.0.0.0/users/signup]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:03:01) [GET]
+Rendering front/index
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/core.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_core.dryml in 0.17s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_pages.dryml in 0.18s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_editing.dryml in 0.06s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_forms.dryml in 0.29s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_navigation.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_plus.dryml in 0.12s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_summary.dryml in 0.14s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_user_pages.dryml in 0.21s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid.dryml in 1.27s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.23s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.10s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.64s
+  DRYML: Compiled app/views/front/index.dryml in 1.73s
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 1782ms (View: 1779, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:03:13) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 268ms (View: 263, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:04:25) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 269ms (View: 264, DB: 2) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:04:27) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 263ms (View: 258, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:04:45) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/core.dryml in 0.07s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_core.dryml in 0.16s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_pages.dryml in 0.16s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_editing.dryml in 0.05s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_forms.dryml in 0.30s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_navigation.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_plus.dryml in 0.12s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_summary.dryml in 0.08s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_user_pages.dryml in 0.24s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid.dryml in 1.23s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.23s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.08s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.60s
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 1734ms (View: 1730, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:07:11) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/front/index.dryml in 0.18s
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 295ms (View: 290, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:07:13) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 266ms (View: 262, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:08:07) [GET]
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.02s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.31s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.04s
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 610ms (View: 606, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:08:11) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 278ms (View: 273, DB: 2) | 200 OK [http://0.0.0.0/users/signup]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:08:49) [GET]
+Rendering front/index
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/core.dryml in 0.06s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_core.dryml in 0.16s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_pages.dryml in 0.17s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_editing.dryml in 0.05s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_forms.dryml in 0.31s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_navigation.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_plus.dryml in 0.12s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_summary.dryml in 0.15s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_user_pages.dryml in 0.19s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid.dryml in 1.25s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.02s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.21s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.07s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.59s
+  DRYML: Compiled app/views/front/index.dryml in 1.67s
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 1728ms (View: 1724, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:08:54) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 263ms (View: 259, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:10:23) [GET]
+Rendering front/index
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/core.dryml in 0.06s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_core.dryml in 0.17s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_document_tags.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_pages.dryml in 0.16s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_editing.dryml in 0.05s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_forms.dryml in 0.29s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_navigation.dryml in 0.03s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_plus.dryml in 0.13s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_summary.dryml in 0.14s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_user_pages.dryml in 0.18s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid.dryml in 1.24s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.02s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.21s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.07s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.57s
+  DRYML: Compiled app/views/front/index.dryml in 1.66s
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 1712ms (View: 1709, DB: 1) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:10:27) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 263ms (View: 258, DB: 1) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 14:12:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+Completed in 260ms (View: 254, DB: 2) | 200 OK [http://0.0.0.0/users]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:12:13) [GET]
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 273ms (View: 268, DB: 2) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Hobo::DevController#set_current_user (for 127.0.0.1 at 2010-01-29 14:12:17) [GET]
+  Parameters: {"login"=>"admin@admin.com"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email_address" = 'admin@admin.com') LIMIT 1[0m
+Redirected to http://0.0.0.0:3005/capabilities
+Completed in 7ms (DB: 1) | 302 Found [http://0.0.0.0/dev/set_current_user?login=admin@admin.com]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:12:17) [GET]
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 277ms (View: 271, DB: 3) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 14:12:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 272ms (View: 267, DB: 2) | 200 OK [http://0.0.0.0/users]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:12:26) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 269ms (View: 264, DB: 2) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:12:28) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering front/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 194ms (View: 190, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 14:12:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 268ms (View: 262, DB: 2) | 200 OK [http://0.0.0.0/users]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:12:34) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 279ms (View: 273, DB: 2) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:13:25) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering front/index
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.09s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.24s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 527ms (View: 523, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:13:27) [GET]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 279ms (View: 272, DB: 4) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#show (for 127.0.0.1 at 2010-01-29 14:13:38) [GET]
+  Parameters: {"id"=>"1-certified-to-drive-big-stuff"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 1) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+Completed in 285ms (View: 279, DB: 3) | 200 OK [http://0.0.0.0/capabilities/1-certified-to-drive-big-stuff]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:13:44) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCapability Load (0.3ms)[0m   [0;1mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 303ms (View: 296, DB: 4) | 200 OK [http://0.0.0.0/capabilities]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 14:13:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;35;1mCapability Load (0.1ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+Completed in 309ms (View: 302, DB: 4) | 200 OK [http://0.0.0.0/users]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-01-29 14:13:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"1-admin", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+Completed in 298ms (View: 288, DB: 2) | 200 OK [http://0.0.0.0/users/1-admin]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-01-29 14:13:59) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1-admin", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;36;1mCapability Load (0.4ms)[0m   [0;1mSELECT * FROM "capabilities" [0m
+Completed in 557ms (View: 547, DB: 3) | 200 OK [http://0.0.0.0/users/1-admin/edit]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-01-29 14:14:12) [PUT]
+  Parameters: {"user"=>{"capabilities"=>["", "@2", "@1", "@3"], "city"=>"", "name"=>"admin", "zip"=>"", "secondary_phone"=>"", "address_state"=>"", "administrator"=>"1", "other_info_1"=>"", "other_info_2"=>"", "address"=>"", "other_info_3"=>"", "primary_phone"=>"", "email_address"=>"admin@admin.com"}, "page_path"=>"users/edit", "action"=>"update", "_method"=>"PUT", "authenticity_token"=>"hI6UloQ6f72+L7utgp+um3Qq8CxQkTjwdON7+FYNDS4=", "id"=>"1-admin", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCapability Load (0.3ms)[0m   [0;1mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 2) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 1) [0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 3) [0m
+  [4;35;1mCapability Load (0.1ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;36;1mUserCapability Create (0.6ms)[0m   [0;1mINSERT INTO "user_capabilities" ("updated_at", "capability_id", "user_id", "created_at") VALUES('2010-01-29 22:14:12', 2, 1, '2010-01-29 22:14:12')[0m
+  [4;35;1mUserCapability Create (0.1ms)[0m   [0mINSERT INTO "user_capabilities" ("updated_at", "capability_id", "user_id", "created_at") VALUES('2010-01-29 22:14:12', 1, 1, '2010-01-29 22:14:12')[0m
+  [4;36;1mUserCapability Create (0.1ms)[0m   [0;1mINSERT INTO "user_capabilities" ("updated_at", "capability_id", "user_id", "created_at") VALUES('2010-01-29 22:14:12', 3, 1, '2010-01-29 22:14:12')[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'admin' AND "users".id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email_address") = 'admin@admin.com' AND "users".id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "address_state" = '', "secondary_phone" = '', "zip" = '', "city" = '', "other_info_3" = '', "primary_phone" = '', "other_info_2" = '', "address" = '', "updated_at" = '2010-01-29 22:14:12', "other_info_1" = '' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3005/users/1-admin
+Completed in 205ms (DB: 4) | 302 Found [http://0.0.0.0/users/1-admin]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-01-29 14:14:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"1-admin", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCapability Load (0.4ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 383ms (View: 368, DB: 5) | 200 OK [http://0.0.0.0/users/1-admin]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:14:27) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 319ms (View: 311, DB: 4) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#show (for 127.0.0.1 at 2010-01-29 14:14:31) [GET]
+  Parameters: {"id"=>"1-certified-to-drive-big-stuff"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 1) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;35;1mCapability Load (0.4ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+Completed in 353ms (View: 346, DB: 4) | 200 OK [http://0.0.0.0/capabilities/1-certified-to-drive-big-stuff]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:14:36) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCapability Load (0.3ms)[0m   [0;1mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 317ms (View: 310, DB: 4) | 200 OK [http://0.0.0.0/capabilities]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:14:39) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering front/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 287ms (View: 283, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:17:50) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering front/index
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 310ms (View: 305, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2010-01-29 14:17:53) [GET]
+  Parameters: {"action"=>"logout", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Redirected to http://0.0.0.0:3005
+Completed in 13ms (DB: 1) | 302 Found [http://0.0.0.0/logout]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:17:53) [GET]
+Rendering front/index
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 293ms (View: 288, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#signup (for 127.0.0.1 at 2010-01-29 14:17:55) [GET]
+  Parameters: {"action"=>"signup", "controller"=>"users"}
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+Completed in 347ms (View: 341, DB: 2) | 200 OK [http://0.0.0.0/users/signup]
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#do_signup (for 127.0.0.1 at 2010-01-29 14:22:51) [POST]
+  Parameters: {"user"=>{"name"=>"resource 2", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email_address"=>"resource2@me.com"}, "page_path"=>"users/signup", "action"=>"do_signup", "authenticity_token"=>"PcFgF6DDgPqvRLpRc9JmVsiRhpRuwwy4AWTN8tTUH8s=", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = 'resource 2') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email_address") = 'resource2@me.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mUser Create (0.4ms)[0m   [0mINSERT INTO "users" ("salt", "name", "key_timestamp", "city", "updated_at", "zip", "crypted_password", "secondary_phone", "remember_token_expires_at", "administrator", "address_state", "remember_token", "other_info_1", "address", "other_info_2", "email_address", "created_at", "state", "primary_phone", "other_info_3") VALUES('437941b95346a2ec6fda7c2a5b6cdb2953666777', 'resource 2', NULL, NULL, '2010-01-29 22:22:51', NULL, 'f061a06cb813ecb134373a941102c99a7f41a9bd', NULL, NULL, 'f', NULL, NULL, NULL, NULL, NULL, 'resource2@me.com', '2010-01-29 22:22:51', 'active', NULL, NULL)[0m
+Redirected to http://0.0.0.0:3005
+Completed in 19ms (DB: 1) | 302 Found [http://0.0.0.0/users/signup]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:22:52) [GET]
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendering front/index
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 312ms (View: 306, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-01-29 14:23:07) [GET]
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendering front/index
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 272ms (View: 267, DB: 2) | 200 OK [http://0.0.0.0/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 14:23:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;35;1mCapability Load (0.1ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+  [4;35;1mCapability Load (0.1ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+Completed in 394ms (View: 387, DB: 4) | 200 OK [http://0.0.0.0/users]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:23:17) [GET]
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCapability Load (0.3ms)[0m   [0;1mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 306ms (View: 298, DB: 4) | 200 OK [http://0.0.0.0/capabilities]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 14:23:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;35;1mCapability Load (0.1ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+  [4;35;1mCapability Load (0.1ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+Completed in 322ms (View: 314, DB: 5) | 200 OK [http://0.0.0.0/users]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-01-29 14:23:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"4-resource-2", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (1.9ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+Completed in 345ms (View: 333, DB: 3) | 200 OK [http://0.0.0.0/users/4-resource-2]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-01-29 14:23:27) [GET]
+  Parameters: {"action"=>"edit", "id"=>"4-resource-2", "controller"=>"users"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+Completed in 419ms (View: 403, DB: 3) | 200 OK [http://0.0.0.0/users/4-resource-2/edit]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-29 14:23:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30 OFFSET 0[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;35;1mCapability Load (0.1ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 2)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+Completed in 329ms (View: 321, DB: 5) | 200 OK [http://0.0.0.0/users]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-01-29 14:23:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"4-resource-2", "controller"=>"users"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+Completed in 408ms (View: 398, DB: 2) | 200 OK [http://0.0.0.0/users/4-resource-2]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-01-29 14:24:03) [GET]
+  Parameters: {"action"=>"edit", "id"=>"4-resource-2", "controller"=>"users"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+Completed in 450ms (View: 437, DB: 2) | 200 OK [http://0.0.0.0/users/4-resource-2/edit]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing Hobo::DevController#set_current_user (for 127.0.0.1 at 2010-01-29 14:24:09) [GET]
+  Parameters: {"login"=>"admin@admin.com"}
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email_address" = 'admin@admin.com') LIMIT 1[0m
+Redirected to http://0.0.0.0:3005/users/4-resource-2/edit
+Completed in 4ms (DB: 3) | 302 Found [http://0.0.0.0/dev/set_current_user?login=admin@admin.com]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-01-29 14:24:09) [GET]
+  Parameters: {"action"=>"edit", "id"=>"4-resource-2", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+  [4;36;1mCapability Load (0.3ms)[0m   [0;1mSELECT * FROM "capabilities" [0m
+Completed in 604ms (View: 593, DB: 3) | 200 OK [http://0.0.0.0/users/4-resource-2/edit]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#update (for 127.0.0.1 at 2010-01-29 14:24:34) [PUT]
+  Parameters: {"user"=>{"capabilities"=>["", "@1", "@3"], "city"=>"", "name"=>"resource 2", "zip"=>"", "secondary_phone"=>"", "address_state"=>"", "administrator"=>"0", "other_info_1"=>"", "other_info_2"=>"", "address"=>"", "other_info_3"=>"", "primary_phone"=>"", "email_address"=>"resource2@me.com"}, "page_path"=>"users/edit", "action"=>"update", "_method"=>"PUT", "authenticity_token"=>"PcFgF6DDgPqvRLpRc9JmVsiRhpRuwwy4AWTN8tTUH8s=", "id"=>"4-resource-2", "controller"=>"users"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCapability Load (0.2ms)[0m   [0;1mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 1) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 3) [0m
+  [4;36;1mCapability Load (0.1ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+  [4;35;1mUserCapability Create (0.4ms)[0m   [0mINSERT INTO "user_capabilities" ("updated_at", "capability_id", "user_id", "created_at") VALUES('2010-01-29 22:24:34', 1, 4, '2010-01-29 22:24:34')[0m
+  [4;36;1mUserCapability Create (0.1ms)[0m   [0;1mINSERT INTO "user_capabilities" ("updated_at", "capability_id", "user_id", "created_at") VALUES('2010-01-29 22:24:34', 3, 4, '2010-01-29 22:24:34')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = 'resource 2' AND "users".id <> 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email_address") = 'resource2@me.com' AND "users".id <> 4) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "address_state" = '', "secondary_phone" = '', "zip" = '', "city" = '', "other_info_3" = '', "primary_phone" = '', "other_info_2" = '', "address" = '', "updated_at" = '2010-01-29 22:24:34', "other_info_1" = '' WHERE "id" = 4[0m
+Redirected to http://0.0.0.0:3005/users/4-resource-2
+Completed in 39ms (DB: 3) | 302 Found [http://0.0.0.0/users/4-resource-2]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-01-29 14:24:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"4-resource-2", "controller"=>"users"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mCapability Load (0.4ms)[0m   [0;1mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 426ms (View: 410, DB: 5) | 200 OK [http://0.0.0.0/users/4-resource-2]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#index (for 127.0.0.1 at 2010-01-29 14:24:40) [GET]
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.6ms)[0m   [0mSELECT * FROM "capabilities" LIMIT 30 OFFSET 0[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 1)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 2)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+Completed in 443ms (View: 346, DB: 6) | 200 OK [http://0.0.0.0/capabilities]
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing CapabilitiesController#show (for 127.0.0.1 at 2010-01-29 14:24:46) [GET]
+  Parameters: {"id"=>"3-certified-to-drive-expensive-stuff"}
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT * FROM "capabilities" WHERE ("capabilities"."id" = 3) [0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" LIMIT 30[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT "users".* FROM "users" INNER JOIN "user_capabilities" ON "users".id = "user_capabilities".user_id WHERE (("user_capabilities".capability_id = 3)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 3)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;35;1mCapability Load (0.3ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 1)) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+  [4;35;1mCapability Load (0.2ms)[0m   [0mSELECT "capabilities".* FROM "capabilities" INNER JOIN "user_capabilities" ON "capabilities".id = "user_capabilities".capability_id WHERE (("user_capabilities".user_id = 4)) [0m
+Completed in 308ms (View: 301, DB: 5) | 200 OK [http://0.0.0.0/capabilities/3-certified-to-drive-expensive-stuff]
