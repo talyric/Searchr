@@ -5,6 +5,7 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&User"><ht key="users.nav_item">Users</ht></nav-item>
   </navigation>
 </def>
 
@@ -48,7 +49,7 @@
 
 
 <def tag="new-page" for="User">
-  <page merge title="#{ht 'users.new.title', :default=>[' New User'] }">
+  <page merge title="#{ht 'users.new.title', :default=>['New User'] }">
     <body: class="new-page user" param/>
 
     <content: param>
@@ -93,7 +94,7 @@
           </header>
 
           <section param="content-body">
-            <field-list fields="email_address, state" param/>
+            <field-list fields="email_address, address, city, address_state, zip, primary_phone, secondary_phone, other_info_1, other_info_2, other_info_3, state" param/>
           </section>
     </content:>
 

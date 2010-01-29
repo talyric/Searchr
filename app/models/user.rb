@@ -6,6 +6,16 @@ class User < ActiveRecord::Base
     name          :string, :required, :unique
     email_address :email_address, :login => true
     administrator :boolean, :default => false
+    address       :string
+    city          :string
+    address_state      :string
+    zip           :string
+    primary_phone :string
+    secondary_phone :string
+    other_info_1  :string
+    other_info_2  :string
+    other_info_3  :string
+    
     timestamps
   end
 
@@ -16,7 +26,7 @@ class User < ActiveRecord::Base
   
   # --- Signup lifecycle --- #
 
-  lifecycle do
+  lifecycle do 
 
     state :active, :default => true
 
@@ -42,7 +52,7 @@ class User < ActiveRecord::Base
 
   def update_permitted?
     acting_user.administrator? || 
-      (acting_user == self && only_changed?(:email_address, :crypted_password,
+      (acting_user == self && only_changed?(:email_address, :crypted_password, :address, :city, :address_state, :zip, :primary_phone, :secondary_phone,
                                             :current_password, :password, :password_confirmation))
     # Note: crypted_password has attr_protected so although it is permitted to change, it cannot be changed
     # directly from a form submission.
@@ -53,7 +63,11 @@ class User < ActiveRecord::Base
   end
 
   def view_permitted?(field)
-    true
+    acting_user.administrator? || acting_user == self
+  end
+  
+  def edit_permitted(attribute)
+    acting_user.administrator? || acting_user == self
   end
 
 end
