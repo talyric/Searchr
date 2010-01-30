@@ -53,7 +53,7 @@
 
 
 <def tag="new-page" for="Capability">
-  <page merge title="#{ht 'capabilities.new.title', :default=>['New Capability'] }">
+  <page merge title="#{ht 'capabilities.new.title', :default=>[' New Capability'] }">
     <body: class="new-page capability" param/>
 
     <content: param>
@@ -179,7 +179,7 @@
 
 
 <def tag="new-page" for="User">
-  <page merge title="#{ht 'users.new.title', :default=>['New User'] }">
+  <page merge title="#{ht 'users.new.title', :default=>[' New User'] }">
     <body: class="new-page user" param/>
 
     <content: param>
