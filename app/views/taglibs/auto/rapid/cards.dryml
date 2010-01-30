@@ -27,7 +27,7 @@
 </def>
 
 <def tag="card" for="UserCapability">
-  <card class="user capability" param="default" merge>
+  <card class="user-capability" param="default" merge>
     <header: param>
       <h4 param="heading"><name/></h4>
     </header:>
