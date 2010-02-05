@@ -9127,3 +9127,34 @@ Rendering front/index
 [0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
 Completed in 396ms (View: 380, DB: 18) | 200 OK [http://127.0.0.1/]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing FrontController#index (for 127.0.0.1 at 2010-02-04 16:31:44) [GET]
+Rendering front/index
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/core.dryml in 0.06s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_core.dryml in 0.13s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_support.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_document_tags.dryml in 0.07s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_pages.dryml in 0.15s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_editing.dryml in 0.10s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_forms.dryml in 0.24s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_navigation.dryml in 0.08s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_plus.dryml in 0.10s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_generics.dryml in 0.02s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_lifecycles.dryml in 0.01s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_summary.dryml in 0.12s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid_user_pages.dryml in 0.21s
+  DRYML: Compiled /Library/Ruby/Gems/1.8/gems/hobo-0.9.103/taglibs/rapid.dryml in 1.24s
+  DRYML: Compiled app/views/taglibs/auto/rapid/cards.dryml in 0.02s
+  DRYML: Compiled app/views/taglibs/auto/rapid/pages.dryml in 0.31s
+  DRYML: Compiled app/views/taglibs/auto/rapid/forms.dryml in 0.03s
+  DRYML: Compiled app/views/taglibs/themes/clean/clean.dryml in 0.01s
+  DRYML: Compiled app/views/taglibs/application.dryml in 1.62s
+  DRYML: Compiled app/views/front/index.dryml in 1.73s
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" LIMIT 30[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+Completed in 1837ms (View: 1831, DB: 1) | 200 OK [http://localhost/]
