@@ -3,7 +3,8 @@ class UserCapability < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    timestamps
+   cert_expiration :date
+   timestamps
   end
 
   belongs_to :user

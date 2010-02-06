@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100129215341) do
+ActiveRecord::Schema.define(:version => 20100202235410) do
 
   create_table "capabilities", :force => true do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20100129215341) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "capability_id"
+    t.date     "cert_expiration"
   end
 
   add_index "user_capabilities", ["capability_id"], :name => "index_user_capabilities_on_capability_id"
