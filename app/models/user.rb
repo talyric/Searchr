@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
     name          :string, :required, :unique
     email_address :email_address, :login => true
     administrator :boolean, :default => false
+    
     address       :string
     city          :string
     address_state      :string
@@ -19,8 +20,8 @@ class User < ActiveRecord::Base
     timestamps
   end
   
-  has_many :capabilities, :through => :user_capabilities, :accessible => true
-  has_many :user_capabilities, :dependent => :destroy
+  has_many :capabilities, :through => :user_capabilities
+  has_many :user_capabilities, :accessible => true, :dependent => :destroy
 
   # This gives admin rights to the first sign-up.
   # Just remove it if you don't want that
@@ -58,7 +59,7 @@ class User < ActiveRecord::Base
     #  (acting_user == self && only_changed?(:email_address, :crypted_password, 
     #                                        :current_password, :password, :password_confirmation))
     acting_user.administrator? || 
-      (acting_user == self && only_changed?(:email_address, :crypted_password, :address, :city, :address_state, :zip, :primary_phone, :secondary_phone,
+      (acting_user == self && only_changed?(:email_address, :crypted_password, :address, :city, :address_state, :zip, :primary_phone, :secondary_phone, :other_info_1, :other_info_2, :other_info_3,
                                             :current_password, :password, :password_confirmation))
     # Note: crypted_password has attr_protected so although it is permitted to change, it cannot be changed
     # directly from a form submission.
@@ -69,7 +70,7 @@ class User < ActiveRecord::Base
   end
 
   def view_permitted?(field)
-    acting_user.administrator? || acting_user == self || true
+    acting_user.administrator? || acting_user == self || new_record?
   end
   
 #  def edit_permitted(attribute)
