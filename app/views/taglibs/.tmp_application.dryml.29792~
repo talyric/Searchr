@@ -23,5 +23,5 @@
 </extend>
 
 <def tag="input" for="Date">
-  <hjq-datepicker dateFormat="yy/mm/dd" merge />
+  <hjq-datepicker dateFormat="yyyy/mm/dd" merge />
 </def>
