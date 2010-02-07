@@ -9,13 +9,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100202235410) do
+ActiveRecord::Schema.define(:version => 20100207034424) do
 
   create_table "capabilities", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "deployments", :force => true do |t|
+    t.string   "title"
+    t.text     "notes"
+    t.string   "status",     :default => "Active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "team_members", :force => true do |t|
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "deployment_id"
+  end
+
+  add_index "team_members", ["deployment_id"], :name => "index_team_members_on_deployment_id"
+  add_index "team_members", ["user_id"], :name => "index_team_members_on_user_id"
 
   create_table "user_capabilities", :force => true do |t|
     t.datetime "created_at"

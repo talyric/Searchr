@@ -13,6 +13,27 @@
   </card>
 </def>
 
+<def tag="card" for="Deployment">
+  <card class="deployment" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+    <body: param>
+      <ht key="team_members.collection.count" count="&this.team_members.size">
+         <count:team_members param/>
+      </ht>
+    </body:>
+  </card>
+</def>
+
+<def tag="card" for="TeamMember">
+  <card class="team-member" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+  </card>
+</def>
+
 <def tag="card" for="User">
   <card class="user" param="default" merge>
     <header: param>
@@ -27,7 +48,7 @@
 </def>
 
 <def tag="card" for="UserCapability">
-  <card class="user capability" param="default" merge>
+  <card class="user-capability" param="default" merge>
     <header: param>
       <h4 param="heading"><name/></h4>
     </header:>

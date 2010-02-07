@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
   
   has_many :capabilities, :through => :user_capabilities
   has_many :user_capabilities, :accessible => true, :dependent => :destroy
+#  belongs_to :deployme
 
   # This gives admin rights to the first sign-up.
   # Just remove it if you don't want that
