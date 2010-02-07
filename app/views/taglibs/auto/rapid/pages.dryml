@@ -6,6 +6,7 @@
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
     <nav-item with="&Capability"><ht key="capabilities.nav_item">Capabilities</ht></nav-item>
+    <nav-item with="&Deployment"><ht key="deployments.nav_item">Deployments</ht></nav-item>
     <nav-item with="&User"><ht key="users.nav_item">Users</ht></nav-item>
   </navigation>
 </def>
@@ -53,7 +54,7 @@
 
 
 <def tag="new-page" for="Capability">
-  <page merge title="#{ht 'capabilities.new.title', :default=>['New Capability'] }">
+  <page merge title="#{ht 'capabilities.new.title', :default=>[' New Capability'] }">
     <body: class="new-page capability" param/>
 
     <content: param>
@@ -142,6 +143,256 @@
 
 
 
+<!-- ====== Deployment Pages ====== -->
+
+<def tag="index-page" for="Deployment">
+  <page merge title="#{ht 'deployments.index.title', :default=>['Deployments'] }">
+    <body: class="index-page deployment" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="deployments.index.heading">
+            Deployments
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="deployments.collection.count" count="&this.size">
+            There <count prefix="are"/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="deployments.actions.new">New Deployment</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Deployment">
+  <page merge title="#{ht 'deployments.new.title', :default=>[' New Deployment'] }">
+    <body: class="new-page deployment" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="deployments.new.heading">
+            New Deployment
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'deployments.actions.create', :default=>['Create Deployment']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Deployment">
+  <page merge title="#{ht 'deployments.show.title', :default=>['Deployment'] }">
+
+    <body: class="show-page deployment" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="deployments.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="deployments.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Deployment
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <field-list fields="notes, status" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading">
+                <ht key="deployments.collection.heading.other" >
+                  Team Members
+                </ht>
+              </h3>
+
+              <collection:team_members param/>
+            </section>
+          </section>
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Deployment">
+  <page merge title="#{ht 'deployments.edit.title', :default=>['Edit Deployment'] }">
+
+    <body: class="edit-page deployment" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="deployments.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit <type-name/>
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'deployments.actions.delete', :default=>['Remove This Deployment']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== TeamMember Pages ====== -->
+
+<def tag="index-page" for="TeamMember">
+  <page merge title="#{ht 'team_members.index.title', :default=>['Team Members'] }">
+    <body: class="index-page team-member" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="team_members.index.heading">
+            Team Members
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="team_members.collection.count" count="&this.size">
+            There <count prefix="are"/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="team_members.actions.new">New Team Member</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="TeamMember">
+  <page merge title="#{ht 'team_members.new.title', :default=>[' New Team Member'] }">
+    <body: class="new-page team-member" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="team_members.new.heading">
+            New Team Member
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'team_members.actions.create', :default=>['Create Team Member']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="TeamMember">
+  <page merge title="#{ht 'team_members.show.title', :default=>['Team Member'] }">
+
+    <body: class="show-page team-member" param/>
+
+    <content: param>
+          <header param="content-header">
+            <a:deployment param="parent-link">&laquo; <ht key="team_members.actions.back" to="deployment"><name/></ht></a:deployment>
+            <h2 param="heading">
+              <ht key="team_members.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="team_members.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Team Member
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <field-list fields="status, user" param/>
+          </section>
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="TeamMember">
+  <page merge title="#{ht 'team_members.edit.title', :default=>['Edit Team Member'] }">
+
+    <body: class="edit-page team-member" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="team_members.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit <type-name/>
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'team_members.actions.delete', :default=>['Remove This Team Member']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
 <!-- ====== User Pages ====== -->
 
 <def tag="index-page" for="User">
@@ -179,7 +430,7 @@
 
 
 <def tag="new-page" for="User">
-  <page merge title="#{ht 'users.new.title', :default=>['New User'] }">
+  <page merge title="#{ht 'users.new.title', :default=>[' New User'] }">
     <body: class="new-page user" param/>
 
     <content: param>
