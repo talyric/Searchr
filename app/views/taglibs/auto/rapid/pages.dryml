@@ -393,6 +393,126 @@
 
 
 
+<!-- ====== UnavailableDate Pages ====== -->
+
+<def tag="index-page" for="UnavailableDate">
+  <page merge title="#{ht 'unavailable_dates.index.title', :default=>['Unavailable Dates'] }">
+    <body: class="index-page unavailable-date" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="unavailable_dates.index.heading">
+            Unavailable Dates
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="unavailable_dates.collection.count" count="&this.size">
+            There <count prefix="are"/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="unavailable_dates.actions.new">New Unavailable Date</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="UnavailableDate">
+  <page merge title="#{ht 'unavailable_dates.new.title', :default=>[' New Unavailable Date'] }">
+    <body: class="new-page unavailable-date" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="unavailable_dates.new.heading">
+            New Unavailable Date
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'unavailable_dates.actions.create', :default=>['Create Unavailable Date']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="UnavailableDate">
+  <page merge title="#{ht 'unavailable_dates.show.title', :default=>['Unavailable Date'] }">
+
+    <body: class="show-page unavailable-date" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="unavailable_dates.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="unavailable_dates.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Unavailable Date
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <field-list fields="start_date, end_date, user" param/>
+          </section>
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="UnavailableDate">
+  <page merge title="#{ht 'unavailable_dates.edit.title', :default=>['Edit Unavailable Date'] }">
+
+    <body: class="edit-page unavailable-date" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="unavailable_dates.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit <type-name/>
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'unavailable_dates.actions.delete', :default=>['Remove This Unavailable Date']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
 <!-- ====== User Pages ====== -->
 
 <def tag="index-page" for="User">
@@ -458,6 +578,8 @@
     <body: class="show-page user" param/>
 
     <content: param>
+      <section-group>
+        <section param="main-content">
           <header param="content-header">
             <a:capabilities param="parent-link">&laquo; <ht key="users.actions.back" to="capabilities"><name/></ht></a:capabilities>
             <h2 param="heading">
@@ -475,7 +597,7 @@
             </a>
           </header>
 
-          <section param="content-body">
+          <section param="content-body" with-flash-messages>
             <field-list fields="email_address, address, city, address_state, zip, primary_phone, secondary_phone, other_info_1, other_info_2, other_info_3, state" param/>
             <section param="collection-section">
               <h3 param="collection-heading">
@@ -487,6 +609,19 @@
               <collection:capabilities param/>
             </section>
           </section>
+        </section>
+
+        <aside param>
+          <section param="unavailable_dates-collection-section">
+            <h3 param="unavailable_dates-collection-heading">
+              <ht key="unavailable_dates.collection.heading.other" >
+                Unavailable Dates
+              </ht>
+            </h3>
+            <collection:unavailable_dates  param="unavailable_dates-collection"/>
+          </section>
+        </aside>
+      </section-group>
     </content:>
 
   </page>
