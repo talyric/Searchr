@@ -40,11 +40,6 @@
       <h4 param="heading"><a><name/></a></h4>
     </header:>
   </card>
-  <card class="unavailable-date" param="default" merge>
-    <header: param>
-      <h4 param="heading"><a><name/></a></h4>
-    </header:>
-  </card>
 </def>
 
 <def tag="card" for="User">
