@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100207034424) do
+ActiveRecord::Schema.define(:version => 20100208223423) do
 
   create_table "capabilities", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(:version => 20100207034424) do
 
   add_index "team_members", ["deployment_id"], :name => "index_team_members_on_deployment_id"
   add_index "team_members", ["user_id"], :name => "index_team_members_on_user_id"
+
+  create_table "unavailable_dates", :force => true do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "unavailable_dates", ["user_id"], :name => "index_unavailable_dates_on_user_id"
 
   create_table "user_capabilities", :force => true do |t|
     t.datetime "created_at"

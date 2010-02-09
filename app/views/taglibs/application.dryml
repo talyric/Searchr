@@ -23,5 +23,19 @@
 </extend>
 
 <def tag="input" for="Date">
+<<<<<<< HEAD
   <hjq-datepicker dateFormat="yy/mm/dd" merge />
 </def>
+=======
+  <hjq-datepicker dateFormat="yyyy/mm/dd" merge />
+</def>
+
+<extend tag="card" for="UnavailableDate">
+  <card class="unavailable-date" param="default" merge>
+  <a><view:start-date/> - <view:end-date/></a> 
+  </card>
+
+	
+</extend>
+
+>>>>>>> 6e4b87bb624cbbbf45d9bde66209356ebeafb396

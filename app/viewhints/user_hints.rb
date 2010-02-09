@@ -1,7 +1,7 @@
 class UserHints < Hobo::ViewHints
 
   field_names :address_state => "State"
-  children :capabilities
+  children :capabilities, :unavailable_dates
 
 end
 
