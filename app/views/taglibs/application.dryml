@@ -23,14 +23,50 @@
 </extend>
 
 <def tag="input" for="Date">
-  <hjq-datepicker dateFormat="yyyy/mm/dd" merge />
+  <hjq-datepicker dateFormat="yy/mm/dd" merge />
 </def>
 
 <extend tag="card" for="UnavailableDate">
   <card class="unavailable-date" param="default" merge>
-  <a><view:start-date/> - <view:end-date/></a> 
+  	<a><view:start-date/> - <view:end-date/></a> 
   </card>
-
-	
 </extend>
 
+<extend tag="card" for="Capability">
+	<old-card merge>
+		<append-body:>
+			<div class="users">
+				<repeat:users join=", "><a/></repeat><else>None</else>
+			</div>
+		</append-body:>
+	</old-card>	
+</extend>
+	
+<extend tag="card" for="Deployment">
+	<old-card merge>
+		<append-body:>
+			<div class="users">
+				<repeat:users join=", "><a/></repeat><else>None</else>
+			</div>
+		</append-body:>
+	</old-card>	
+</extend>
+	
+<extend tag="card" for="User">
+	<old-card merge>
+		<append-body:>
+			<div class="capabilities">
+				<repeat:capabilities join=", "><a/></repeat><else>None</else>
+			</div>
+		</append-body:>
+	</old-card>	
+</extend>
+
+<def tag="show-page-certs">
+	<show-page merge>
+		<collection:capabilities param>
+			YYY
+		</collection:capabilities>
+	</show-page>
+</def>
+	
