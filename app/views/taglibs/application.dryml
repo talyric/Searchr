@@ -64,9 +64,12 @@
 
 <def tag="show-page-certs">
 	<show-page merge>
-		<collection:capabilities param>
-			YYY
-		</collection:capabilities>
+		<collection-section:>
+			<table-plus with="&@user.user_capabilities" fields="the_name, cert_expiration">
+				<empty-message:>No capabilities.</empty-message:>
+      			<the_name-heading-link:>Capability</the_name-heading-link:>
+			</table-plus>				
+		</collection-section:>
 	</show-page>
 </def>
 	

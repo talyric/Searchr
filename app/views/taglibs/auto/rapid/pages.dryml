@@ -100,6 +100,7 @@
           </header>
 
           <section param="content-body">
+            <field-list fields="capability_name" param/>
             <section param="collection-section">
               <h3 param="collection-heading">
                 <ht key="capabilities.collection.heading.other" >

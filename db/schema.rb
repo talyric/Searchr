@@ -9,10 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100208223423) do
+ActiveRecord::Schema.define(:version => 20100210223416) do
 
   create_table "capabilities", :force => true do |t|
-    t.string   "name"
+    t.string   "capability_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

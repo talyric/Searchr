@@ -7,9 +7,15 @@ class UserCapability < ActiveRecord::Base
    timestamps
   end
 
+
   belongs_to :user
   belongs_to :capability
 
+
+  def the_name
+    Capability.find(capability_id).capability_name
+  end
+  
   # --- Permissions --- #
 
   def create_permitted?
