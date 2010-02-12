@@ -3,7 +3,7 @@ class Capability < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    capability_name :string
+    capability_name :string, :name => true
     timestamps
   end
   
