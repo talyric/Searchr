@@ -22,9 +22,11 @@
   </old-page>
 </extend>
 
-<def tag="input" for="Date">
-  <hjq-datepicker dateFormat="yy/mm/dd" merge />
-</def>
+<extend tag="input" for="date">
+   <old-input merge include-blank="&true" order="month,day,year" />
+</extend> 
+
+<def tag="view" for="Date"><%= this.strftime("%m/%d/%Y") %></def> 
 
 <extend tag="card" for="UnavailableDate">
   <card class="unavailable-date" param="default" merge>
