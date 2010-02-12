@@ -1,0 +1,27 @@
+<include src="rapid" plugin="hobo"/>
+
+<include src="taglibs/auto/rapid/cards"/>
+<include src="taglibs/auto/rapid/pages"/>
+<include src="taglibs/auto/rapid/forms"/>
+
+<set-theme name="clean"/>
+
+<def tag="app-name">Searchr</def>
+
+<def tag="input-many" for="Capability">
+	<input-many><input:name/><input:cert_expiration/></input-many>
+</def>
+
+<include src="hobo-jquery" plugin="hobo-jquery" />
+
+<extend tag="page">
+  <old-page merge>
+    <custom-scripts:>
+      <hjq-assets/>
+    </custom-scripts>
+  </old-page>
+</extend>
+
+<def tag="input" for="Date">
+  <hjq-datepicker dateFormat="yyyy/mm/dd" merge />
+</def>
