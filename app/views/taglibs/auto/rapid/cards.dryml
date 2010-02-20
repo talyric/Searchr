@@ -26,6 +26,14 @@
   </card>
 </def>
 
+<def tag="card" for="Interval">
+  <card class="interval" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+  </card>
+</def>
+
 <def tag="card" for="TeamMember">
   <card class="team-member" param="default" merge>
     <header: param>

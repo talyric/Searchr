@@ -7,6 +7,7 @@
     <nav-item href="#{base_url}/">Home</nav-item>
     <nav-item with="&Capability"><ht key="capabilities.nav_item">Capabilities</ht></nav-item>
     <nav-item with="&Deployment"><ht key="deployments.nav_item">Deployments</ht></nav-item>
+    <nav-item with="&Interval"><ht key="intervals.nav_item">Intervals</ht></nav-item>
     <nav-item with="&User"><ht key="users.nav_item">Users</ht></nav-item>
   </navigation>
 </def>
@@ -258,6 +259,126 @@
           </ht>
         </h2>
         <delete-button label="#{ht 'deployments.actions.delete', :default=>['Remove This Deployment']}" param/>
+      </section>
+
+      <section param="content-body">
+        <form param/>
+      </section>
+    </content:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Interval Pages ====== -->
+
+<def tag="index-page" for="Interval">
+  <page merge title="#{ht 'intervals.index.title', :default=>['Intervals'] }">
+    <body: class="index-page interval" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="intervals.index.heading">
+            Intervals
+          </ht>
+        </h2>
+
+        <p param="count" if>
+          <ht key="intervals.collection.count" count="&this.size">
+            There <count prefix="are"/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+        <a action="new" to="&model" param="new-link">
+          <ht key="intervals.actions.new">New Interval</ht>
+        </a>
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+
+
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Interval">
+  <page merge title="#{ht 'intervals.new.title', :default=>[' New Interval'] }">
+    <body: class="new-page interval" param/>
+
+    <content: param>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="intervals.new.heading">
+            New Interval
+          </ht>
+        </h2>
+      </section>
+
+      <section param="content-body">
+        <form param>
+          <submit: label="#{ht 'intervals.actions.create', :default=>['Create Interval']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Interval">
+  <page merge title="#{ht 'intervals.show.title', :default=>['Interval'] }">
+
+    <body: class="show-page interval" param/>
+
+    <content: param>
+          <header param="content-header">
+            <h2 param="heading">
+              <ht key="intervals.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
+                <name/>
+              </ht>
+            </h2>
+
+            <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="intervals.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Interval
+              </ht>
+            </a>
+          </header>
+
+          <section param="content-body">
+            <field-list fields="start_time, end_time, user" param/>
+          </section>
+    </content:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Interval">
+  <page merge title="#{ht 'intervals.edit.title', :default=>['Edit Interval'] }">
+
+    <body: class="edit-page interval" param/>
+
+    <content:>
+      <section param="content-header">
+        <h2 param="heading">
+          <ht key="intervals.edit.heading" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit <type-name/>
+          </ht>
+        </h2>
+        <delete-button label="#{ht 'intervals.actions.delete', :default=>['Remove This Interval']}" param/>
       </section>
 
       <section param="content-body">
@@ -619,6 +740,14 @@
               </ht>
             </h3>
             <collection:unavailable_dates  param="unavailable_dates-collection"/>
+          </section>
+          <section param="intervals-collection-section">
+            <h3 param="intervals-collection-heading">
+              <ht key="intervals.collection.heading.other" >
+                Intervals
+              </ht>
+            </h3>
+            <collection:intervals  param="intervals-collection"/>
           </section>
         </aside>
       </section-group>

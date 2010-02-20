@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100210223416) do
+ActiveRecord::Schema.define(:version => 20100217231333) do
 
   create_table "capabilities", :force => true do |t|
     t.string   "capability_name"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(:version => 20100210223416) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "intervals", :force => true do |t|
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "intervals", ["user_id"], :name => "index_intervals_on_user_id"
 
   create_table "team_members", :force => true do |t|
     t.string   "status"
