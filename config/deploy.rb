@@ -9,7 +9,7 @@ set :branch, :master
 set :deploy_via, :remote_cache
 set :deploy_to, "/var/www/vhosts/lyriccode.com/subdomains/searchr/#{application}"
 set :scm_verbose, true
-set :use_sudo, false
+set :use_sudo, true
 set :user, 'root'
 
 role :app, domain 
