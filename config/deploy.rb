@@ -7,7 +7,7 @@ set :domain, 'searchr.lyriccode.com'
 set :scm, :git
 set :branch, :master
 set :deploy_via, :remote_cache
-set :deploy_to, "/var/www/vhosts/lyriccode.com/subdomains/searchr/deployment/#{application}"
+set :deploy_to, "/var/www/vhosts/lyriccode.com/subdomains/searchr/#{application}"
 set :scm_verbose, true
 set :use_sudo, false
 set :user, 'root'
