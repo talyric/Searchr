@@ -1,4 +1,5 @@
 default_run_options[:pty] = true
+default_environment['PATH'] = "/opt/ruby-enterprise-1.8.7-2010.01/bin:$PATH"
 
 set :application, "Searchr"
 
@@ -26,3 +27,7 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
+
+ task :show_path do
+   run "$PATH"
+ end
