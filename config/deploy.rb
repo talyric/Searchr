@@ -18,16 +18,13 @@ role :app, domain
 role :web, domain 
 role :db, domain, :primary => true 
 
-# If you are using Passenger mod_rails uncomment this:
-# if you're still using the script/reapear helper you will need
-# these http://github.com/rails/irs_process_scripts
-
 namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 end
 
- task :show_path do
-   run "$PATH"
- end
+desc "Show the server's $PATH"
+task :show_remote_path do
+  run "echo $PATH"
+end
