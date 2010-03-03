@@ -1,7 +1,9 @@
 default_run_options[:pty] = true
 
 set :application, "Searchr"
-set :repository,  "git://github.com/talyric/Searchr.git"
+
+set :repository,  "git://github.com/talyric/testing_pages.git"
+#set :repository,  "git://github.com/talyric/Searchr.git"
 set :domain, 'searchr.lyriccode.com' 
 
 set :scm, :git
