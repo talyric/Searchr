@@ -1,3 +1,8 @@
+#
+# The :deploy_to directory must be created first, 
+# and then the ownership transfered to the :user, ie.  chown lcs:psaserv Searchr/ 
+# before this deployment will work!
+#
 default_run_options[:pty] = true
 default_environment['PATH'] = "/opt/ruby-enterprise-1.8.7-2010.01/bin:$PATH"
 
@@ -12,7 +17,7 @@ set :deploy_via, :remote_cache
 set :deploy_to, "/var/www/vhosts/lyriccode.com/subdomains/searchr/#{application}"
 set :scm_verbose, true
 set :use_sudo, false
-set :user, 'root'
+set :user, 'lcs'
 
 role :app, domain 
 role :web, domain 

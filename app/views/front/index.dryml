@@ -8,7 +8,7 @@
       <section class="welcome-message">
         <h3>Public Front Page</h3>
         <ul>
-          <li>Front page stuff goes here!</li>
+          <li>Front page stuff goes here! (v0.5.201003031435)</li>
         </ul>
     
         <% if User.count == 0 -%>
