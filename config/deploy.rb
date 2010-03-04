@@ -29,6 +29,15 @@ namespace :deploy do
   end
 end
 
+# reconfigure database 
+after "deploy:update_code", :configure_database 
+
+desc "copy database.yml into the current release path" 
+task :configure_database, :roles => :app do 
+db_config = "#{deploy_to}/config/database.yml" 
+run "cp #{db_config} #{release_path}/config/database.yml" 
+end 
+
 desc "Show the server's $PATH"
 task :show_remote_path do
   run "echo $PATH"
